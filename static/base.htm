@@ -2760,27 +2760,22 @@ MathJax.Hub.Config({
             <div id="course-footer"></div>
 
 
-            <div class="logininfo">Вы зашли под именем <a href="https://etest.bsmu.by/user/profile.php?id=6761"
-                                                          title="Просмотр профиля">Владислав Сакович</a> (<a
-                    href="https://etest.bsmu.by/login/logout.php?sesskey=kwg8AS64J4">Выход</a>)
-            </div>
+            <div class="logininfo">Вы зашли под именем <a href="https://etest.bsmu.by/user/profile.php?id=1076" title="Просмотр профиля">Владислав Сакович</a> (<a href="https://etest.bsmu.by/login/logout.php?sesskey=oFpoepOljg">Выход</a>)</div>
             <div class="tool_usertours-resettourcontainer"></div>
-            <div class="homelink"><a href="https://etest.bsmu.by/course/view.php?id=392">01_RU_Социология здоровья</a>
-            </div>
+            <div class="homelink"><a href="https://etest.bsmu.by/course/view.php?id=400">08_RU_ОЧ_Фармакология</a></div>
             <nav class="nav navbar-nav d-md-none" aria-label="Настраиваемое меню">
                 <ul class="list-unstyled pt-3">
                 </ul>
             </nav>
-            <div class="tool_dataprivacy"><a href="https://etest.bsmu.by/admin/tool/dataprivacy/summary.php">Сводка
-                хранения данных</a></div>
+            <div class="tool_dataprivacy"><a href="https://etest.bsmu.by/admin/tool/dataprivacy/summary.php">Сводка хранения данных</a></div>
             <script>
                 //<![CDATA[
                 var require = {
-                    baseUrl: 'https://etest.bsmu.by/lib/requirejs.php/1650891756/',
+                    baseUrl : 'https://etest.bsmu.by/lib/requirejs.php/1650891756/',
                     // We only support AMD modules with an explicit define() statement.
                     enforceDefine: true,
                     skipDataMain: true,
-                    waitSeconds: 0,
+                    waitSeconds : 0,
 
                     paths: {
                         jquery: 'https://etest.bsmu.by/lib/javascript.php/1650891756/lib/jquery/jquery-3.4.1.min',
@@ -2792,28 +2787,27 @@ MathJax.Hub.Config({
                     map: {
                         // '*' means all modules will get 'jqueryprivate'
                         // for their 'jquery' dependency.
-                        '*': {jquery: 'jqueryprivate'},
+                        '*': { jquery: 'jqueryprivate' },
                         // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
-                        '*': {process: 'core/first'},
+                        '*': { process: 'core/first' },
 
                         // 'jquery-private' wants the real jQuery module
                         // though. If this line was not here, there would
                         // be an unresolvable cyclic dependency.
-                        jqueryprivate: {jquery: 'jquery'}
+                        jqueryprivate: { jquery: 'jquery' }
                     }
                 };
 
                 //]]>
             </script>
-            <script src="./0_files/javascript(7).php"></script>
+            <script src="https://etest.bsmu.by/lib/javascript.php/1650891756/lib/requirejs/require.min.js"></script>
             <script>
                 //<![CDATA[
-                M.util.js_pending("core/first");
-                require(['core/first'], function () {
+                M.util.js_pending("core/first");require(['core/first'], function() {
                     require(['core/prefetch']);
                     ;
-                    require(["media_videojs/loader"], function (loader) {
-                        loader.setUp(function (videojs) {
+                    require(["media_videojs/loader"], function(loader) {
+                        loader.setUp(function(videojs) {
                             videojs.options.flash.swf = "https://etest.bsmu.by/media/player/videojs/videojs/video-js.swf";
                             videojs.addLanguage('ru', {
                                 "Audio Player": "Аудио проигрыватель",
@@ -2902,10 +2896,9 @@ MathJax.Hub.Config({
                             });
 
                         });
-                    });
-                    ;
+                    });;
 
-                    require(['jquery', 'message_popup/notification_popover_controller'], function ($, controller) {
+                    require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
                         var container = $('#nav-notification-popover-container');
                         var controller = new controller(container);
                         controller.registerEventListeners();
@@ -2918,164 +2911,63 @@ MathJax.Hub.Config({
                             'jquery',
                             'core_message/message_popover'
                         ],
-                        function (
+                        function(
                             $,
                             Popover
                         ) {
-                            var toggle = $('#message-drawer-toggle-626ac9d2c338c626ac9d2b49506');
+                            var toggle = $('#message-drawer-toggle-626b21e1803ed626b21e17d3ec3');
                             Popover.init(toggle);
                         });
                     ;
 
-                    require(['jquery', 'core/custom_interaction_events'], function ($, CustomEvents) {
+                    require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
                         CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
-                        $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function () {
+                        $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
                             if (!$(this).val()) {
                                 return false;
                             }
-                            $('#url_select_f626ac9d2b495015').submit();
+                            $('#url_select_f626b21e17d3ec12').submit();
                         });
                     });
                     ;
 
-                    require(['jquery', 'core_message/message_drawer'], function ($, MessageDrawer) {
-                        var root = $('#message-drawer-626ac9d2c794a626ac9d2b495016');
-                        MessageDrawer.init(root, '626ac9d2c794a626ac9d2b495016', false);
+                    require(['jquery', 'core_message/message_drawer'], function($, MessageDrawer) {
+                        var root = $('#message-drawer-626b21e185954626b21e17d3ec13');
+                        MessageDrawer.init(root, '626b21e185954626b21e17d3ec13', false);
                     });
                     ;
 
                     M.util.js_pending('theme_boost/loader');
-                    require(['theme_boost/loader'], function () {
+                    require(['theme_boost/loader'], function() {
                         M.util.js_complete('theme_boost/loader');
                     });
 
                     M.util.js_pending('theme_boost/drawer');
-                    require(['theme_boost/drawer'], function (drawer) {
+                    require(['theme_boost/drawer'], function(drawer) {
                         drawer.init();
                         M.util.js_complete('theme_boost/drawer');
                     });
                     ;
-                    M.util.js_pending('core/notification');
-                    require(['core/notification'], function (amd) {
-                        amd.init(45356, [], true);
-                        M.util.js_complete('core/notification');
-                    });
-                    ;
-                    M.util.js_pending('core/log');
-                    require(['core/log'], function (amd) {
-                        amd.setConfig({"level": "warn"});
-                        M.util.js_complete('core/log');
-                    });
-                    ;
-                    M.util.js_pending('core/page_global');
-                    require(['core/page_global'], function (amd) {
-                        amd.init();
-                        M.util.js_complete('core/page_global');
-                    });
-                    M.util.js_complete("core/first");
+                    M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(195614, [], true); M.util.js_complete('core/notification');});;
+                    M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+                    M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
                 });
                 //]]>
             </script>
-            <script src="./0_files/javascript(8).php"></script>
+            <script src="https://etest.bsmu.by/theme/javascript.php/boost/1650891755/footer"></script>
             <script>
                 //<![CDATA[
-                M.str = {
-                    "moodle": {
-                        "lastmodified": "\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435",
-                        "name": "\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435",
-                        "error": "\u041e\u0448\u0438\u0431\u043a\u0430",
-                        "info": "\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f",
-                        "yes": "\u0414\u0430",
-                        "no": "\u041d\u0435\u0442",
-                        "ok": "OK",
-                        "cancel": "\u041e\u0442\u043c\u0435\u043d\u0430",
-                        "changesmadereallygoaway": "\u0412\u044b \u0432\u043d\u0435\u0441\u043b\u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f. \u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b, \u0447\u0442\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u0443\u0439\u0442\u0438 \u0438 \u043f\u043e\u0442\u0435\u0440\u044f\u0442\u044c \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f?",
-                        "confirm": "\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c",
-                        "areyousure": "\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b?",
-                        "closebuttontitle": "\u0417\u0430\u043a\u0440\u044b\u0442\u044c",
-                        "unknownerror": "\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430",
-                        "file": "\u0424\u0430\u0439\u043b",
-                        "url": "URL"
-                    },
-                    "repository": {
-                        "type": "\u0422\u0438\u043f",
-                        "size": "\u0420\u0430\u0437\u043c\u0435\u0440",
-                        "invalidjson": "\u041d\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u0441\u0442\u0440\u043e\u043a\u0430 JSON",
-                        "nofilesattached": "\u041d\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d \u043d\u0438 \u043e\u0434\u0438\u043d \u0444\u0430\u0439\u043b",
-                        "filepicker": "\u0412\u044b\u0431\u043e\u0440 \u0444\u0430\u0439\u043b\u0430",
-                        "logout": "\u0412\u044b\u0445\u043e\u0434",
-                        "nofilesavailable": "\u041d\u0435\u0442 \u043d\u0438 \u043e\u0434\u043d\u043e\u0433\u043e \u0444\u0430\u0439\u043b\u0430",
-                        "norepositoriesavailable": "\u041a \u0441\u043e\u0436\u0430\u043b\u0435\u043d\u0438\u044e, \u043d\u0438 \u043e\u0434\u043d\u043e \u0438\u0437 \u0412\u0430\u0448\u0438\u0445 \u0442\u0435\u043a\u0443\u0449\u0438\u0445 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449 \u0444\u0430\u0439\u043b\u043e\u0432 \u043d\u0435 \u043c\u043e\u0436\u0435\u0442 \u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0444\u0430\u0439\u043b\u044b \u0432 \u0437\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u043c\u043e\u043c \u0444\u043e\u0440\u043c\u0430\u0442\u0435.",
-                        "fileexistsdialogheader": "\u0424\u0430\u0439\u043b \u0441\u043e\u0437\u0434\u0430\u043d",
-                        "fileexistsdialog_editor": "\u0424\u0430\u0439\u043b \u0441 \u044d\u0442\u0438\u043c \u0438\u043c\u0435\u043d\u0435\u043c \u0443\u0436\u0435 \u0431\u044b\u043b \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d \u043a \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0443\u0435\u043c\u043e\u043c\u0443 \u0442\u0435\u043a\u0441\u0442\u0443",
-                        "fileexistsdialog_filemanager": "\u0424\u0430\u0439\u043b \u0441 \u044d\u0442\u0438\u043c \u0438\u043c\u0435\u043d\u0435\u043c \u0443\u0436\u0435 \u0431\u044b\u043b \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d",
-                        "renameto": "\u041f\u0435\u0440\u0435\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u0442\u044c \u0432 \u00ab{$a}\u00bb",
-                        "referencesexist": "\u041d\u0430 \u044d\u0442\u043e\u0442 \u0444\u0430\u0439\u043b \u0435\u0441\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0438: {$a}",
-                        "select": "\u0412\u044b\u0431\u0440\u0430\u0442\u044c"
-                    },
-                    "admin": {
-                        "confirmdeletecomments": "\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b \u0432 \u0442\u043e\u043c, \u0447\u0442\u043e \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442\u0435\u0441\u044c \u0443\u0434\u0430\u043b\u0438\u0442\u044c \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438?",
-                        "confirmation": "\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d\u0438\u0435"
-                    },
-                    "question": {"flagged": "\u041e\u0442\u043c\u0435\u0447\u0435\u043d\u043e"},
-                    "quiz": {
-                        "functiondisabledbysecuremode": "\u0412 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u044d\u0442\u0430 \u0444\u0443\u043d\u043a\u0446\u0438\u044f \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u0430",
-                        "startattempt": "\u041d\u0430\u0447\u0430\u0442\u044c \u043f\u043e\u043f\u044b\u0442\u043a\u0443",
-                        "timesup": "\u0412\u0440\u0435\u043c\u044f \u0437\u0430\u043a\u043e\u043d\u0447\u0438\u043b\u043e\u0441\u044c!"
-                    },
-                    "debug": {
-                        "debuginfo": "\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u043e\u0431 \u043e\u0442\u043b\u0430\u0434\u043a\u0435",
-                        "line": "\u0421\u0442\u0440\u043e\u043a\u0430",
-                        "stacktrace": "\u0422\u0440\u0430\u0441\u0441\u0438\u0440\u043e\u0432\u043a\u0438 \u0441\u0442\u0435\u043a\u0430"
-                    },
-                    "langconfig": {"labelsep": ":"}
-                };
+                M.str = {"moodle":{"lastmodified":"\u041f\u043e\u0441\u043b\u0435\u0434\u043d\u0435\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435","name":"\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435","error":"\u041e\u0448\u0438\u0431\u043a\u0430","info":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f","yes":"\u0414\u0430","no":"\u041d\u0435\u0442","ok":"OK","cancel":"\u041e\u0442\u043c\u0435\u043d\u0430","confirm":"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c","areyousure":"\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b?","closebuttontitle":"\u0417\u0430\u043a\u0440\u044b\u0442\u044c","unknownerror":"\u041d\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043d\u0430\u044f \u043e\u0448\u0438\u0431\u043a\u0430","file":"\u0424\u0430\u0439\u043b","url":"URL"},"repository":{"type":"\u0422\u0438\u043f","size":"\u0420\u0430\u0437\u043c\u0435\u0440","invalidjson":"\u041d\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u0441\u0442\u0440\u043e\u043a\u0430 JSON","nofilesattached":"\u041d\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d \u043d\u0438 \u043e\u0434\u0438\u043d \u0444\u0430\u0439\u043b","filepicker":"\u0412\u044b\u0431\u043e\u0440 \u0444\u0430\u0439\u043b\u0430","logout":"\u0412\u044b\u0445\u043e\u0434","nofilesavailable":"\u041d\u0435\u0442 \u043d\u0438 \u043e\u0434\u043d\u043e\u0433\u043e \u0444\u0430\u0439\u043b\u0430","norepositoriesavailable":"\u041a \u0441\u043e\u0436\u0430\u043b\u0435\u043d\u0438\u044e, \u043d\u0438 \u043e\u0434\u043d\u043e \u0438\u0437 \u0412\u0430\u0448\u0438\u0445 \u0442\u0435\u043a\u0443\u0449\u0438\u0445 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449 \u0444\u0430\u0439\u043b\u043e\u0432 \u043d\u0435 \u043c\u043e\u0436\u0435\u0442 \u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0444\u0430\u0439\u043b\u044b \u0432 \u0437\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u043c\u043e\u043c \u0444\u043e\u0440\u043c\u0430\u0442\u0435.","fileexistsdialogheader":"\u0424\u0430\u0439\u043b \u0441\u043e\u0437\u0434\u0430\u043d","fileexistsdialog_editor":"\u0424\u0430\u0439\u043b \u0441 \u044d\u0442\u0438\u043c \u0438\u043c\u0435\u043d\u0435\u043c \u0443\u0436\u0435 \u0431\u044b\u043b \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d \u043a \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0443\u0435\u043c\u043e\u043c\u0443 \u0442\u0435\u043a\u0441\u0442\u0443","fileexistsdialog_filemanager":"\u0424\u0430\u0439\u043b \u0441 \u044d\u0442\u0438\u043c \u0438\u043c\u0435\u043d\u0435\u043c \u0443\u0436\u0435 \u0431\u044b\u043b \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d","renameto":"\u041f\u0435\u0440\u0435\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u0442\u044c \u0432 \u00ab{$a}\u00bb","referencesexist":"\u041d\u0430 \u044d\u0442\u043e\u0442 \u0444\u0430\u0439\u043b \u0435\u0441\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0438: {$a}","select":"\u0412\u044b\u0431\u0440\u0430\u0442\u044c"},"admin":{"confirmdeletecomments":"\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b \u0432 \u0442\u043e\u043c, \u0447\u0442\u043e \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442\u0435\u0441\u044c \u0443\u0434\u0430\u043b\u0438\u0442\u044c \u043a\u043e\u043c\u043c\u0435\u043d\u0442\u0430\u0440\u0438\u0438?","confirmation":"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043d\u0438\u0435"},"debug":{"debuginfo":"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u043e\u0431 \u043e\u0442\u043b\u0430\u0434\u043a\u0435","line":"\u0421\u0442\u0440\u043e\u043a\u0430","stacktrace":"\u0422\u0440\u0430\u0441\u0441\u0438\u0440\u043e\u0432\u043a\u0438 \u0441\u0442\u0435\u043a\u0430"},"langconfig":{"labelsep":":"}};
                 //]]>
             </script>
             <script>
                 //<![CDATA[
-                (function () {
-                    Y.use("moodle-filter_mathjaxloader-loader", function () {
-                        M.filter_mathjaxloader.configure({
-                            "mathjaxconfig": "\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n",
-                            "lang": "ru"
-                        });
-                    });
-                    Y.use("moodle-filter_glossary-autolinker", function () {
-                        M.filter_glossary.init_filter_autolinking({"courseid": 0});
-                    });
-                    Y.use("moodle-mod_quiz-autosave", function () {
-                        M.mod_quiz.autosave.init("60");
-                    });
-                    M.util.js_pending('random626ac9d2b49501');
-                    Y.use('core_question_flags', function (Y) {
-                        M.core_question_flags.init(Y, "https:\/\/etest.bsmu.by\/question\/toggleflag.php", [{
-                            "src": "https:\/\/etest.bsmu.by\/theme\/image.php\/boost\/core\/1650891755\/i\/unflagged",
-                            "title": "\u041e\u0442\u043c\u0435\u0442\u0438\u0442\u044c \u044d\u0442\u043e\u0442 \u0432\u043e\u043f\u0440\u043e\u0441 \u0444\u043b\u0430\u0436\u043a\u043e\u043c, \u0447\u0442\u043e\u0431\u044b \u043d\u0435 \u0437\u0430\u0431\u044b\u0442\u044c \u043e \u043d\u0451\u043c",
-                            "alt": "\u041d\u0435 \u043e\u0442\u043c\u0435\u0447\u0435\u043d\u043e"
-                        }, {
-                            "src": "https:\/\/etest.bsmu.by\/theme\/image.php\/boost\/core\/1650891755\/i\/flagged",
-                            "title": "\u0421\u043d\u044f\u0442\u044c \u0444\u043b\u0430\u0436\u043e\u043a",
-                            "alt": "\u041e\u0442\u043c\u0435\u0447\u0435\u043d\u043e"
-                        }], ["\u041e\u0442\u043c\u0435\u0442\u0438\u0442\u044c \u0432\u043e\u043f\u0440\u043e\u0441", "\u0421\u043d\u044f\u0442\u044c \u0444\u043b\u0430\u0436\u043e\u043a"]);
-                        M.util.js_complete('random626ac9d2b49501');
-                    });
-                    M.util.js_pending('random626ac9d2b49502');
-                    Y.use('mod_quiz', function (Y) {
-                        M.mod_quiz.init_attempt_form(Y);
-                        M.util.js_complete('random626ac9d2b49502');
-                    });
-                    M.util.js_pending('random626ac9d2b49503');
-                    Y.use('mod_quiz', function (Y) {
-                        M.mod_quiz.nav.init(Y);
-                        M.util.js_complete('random626ac9d2b49503');
+                (function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"ru"});
+                });
+                    Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
                     });
                     M.util.help_popups.setup(Y);
-                    M.util.js_pending('random626ac9d2b495017');
-                    Y.on('domready', function () {
-                        M.util.js_complete("init");
-                        M.util.js_complete('random626ac9d2b495017');
-                    });
+                    M.util.js_pending('random626b21e17d3ec14'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random626b21e17d3ec14'); });
                 })();
                 //]]>
             </script>
@@ -3096,6 +2988,14 @@ MathJax.Hub.Config({
             const leftMs = $timer.dataset.endDate - Date.now();
             $timer.textContent = new Date(leftMs).toISOString().slice(12, 19);
         }
+    })();
+</script>
+<script>
+    (() => {
+        const url = new URL(window.location.href);
+        url.searchParams.set("attempt", "1935027");
+        url.searchParams.set("cmid", "44404");
+        window.history.pushState(null, null, url.toString());
     })();
 </script>
 </body>

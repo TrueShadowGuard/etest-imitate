@@ -19,11 +19,11 @@ app.get("/restart", (req, res) => {
     currentPage = 1;
     visitedPages = {};
     endDate = new Date((new Date).getTime() + 30*60000);
-    res.redirect("/page")
+    res.redirect("/mod/quiz/attempt.php")
 });
 
-app.use("/page", express.static(path.resolve("static")));
-app.get("/page", async (req, res) => {
+app.use("/mod/quiz/attempt.php", express.static(path.resolve("static")));
+app.get("/mod/quiz/attempt.php", async (req, res) => {
     const queryPage = req.query.page;
     if (queryPage) currentPage = queryPage;
 
@@ -36,18 +36,28 @@ app.get("/page", async (req, res) => {
     renderNavigation(html, currentPage, visitedPages);
     renderTimer(html, endDate);
 
+    html.querySelector("body").innerHTML += `
+    <script>
+    (() => {
+        const url = new URL(window.location.href);
+    url.searchParams.set("page", ${currentPage});
+    window.history.pushState(null, null, url.toString());
+    })();
+    </script>
+    `
+
     visitedPages[currentPage] = true;
     res.setHeader("Content-Type", "text/html");
     res.send(html.toString());
 });
 app.get("/next", (req, res) => {
     currentPage++;
-    res.redirect("/page");
+    res.redirect("/mod/quiz/attempt.php");
 });
 app.get("/prev", (req, res) => {
     currentPage--;
     console.log("prev")
-    res.redirect("/page");
+    res.redirect("/mod/quiz/attempt.php");
 });
 
 
@@ -90,7 +100,7 @@ function renderNavigation(html, currentPage, visitedPages) {
         e.preventDefault();
         const questionIndex = $qnbutton.dataset.quizPage;
         console.log(e.target.dataset);
-        window.open("/page?page=" + (+questionIndex + 1), "_self");
+        window.open("/mod/quiz/attempt.php?page=" + (+questionIndex + 1), "_self");
     }, true);
     </script>`;
     if(currentPage == 1) {
