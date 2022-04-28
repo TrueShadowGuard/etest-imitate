@@ -6,7 +6,7 @@ import cookieParser from "cookie-parser";
 import {parse} from 'node-html-parser';
 import {multipleTemplate, questions, singleTemplate} from "./questions.js";
 
-const PORT = 80;
+const PORT = process.env.PORT || 80;
 
 const app = express();
 app.use(cookieParser());
@@ -120,4 +120,4 @@ function renderTimer(html, endDate) {
     $timer.setAttribute("data-end-date", +endDate)
 }
 
-app.listen(80, () => console.log(`Server started at ${PORT}`.yellow));
+app.listen(PORT, () => console.log(`Server started at ${PORT}`.yellow));
