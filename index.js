@@ -26,8 +26,8 @@ app.use("/mod/quiz/attempt.php", express.static(path.resolve("static")));
 app.get("/mod/quiz/attempt.php", async (req, res) => {
     const queryPage = req.query.page;
     if (queryPage) currentPage = queryPage;
-
-    console.log(visitedPages);
+    currentPage = Math.min(30, currentPage);
+    currentPage = Math.max(1, currentPage);
 
     let file = (await fs.readFile(path.resolve("static", "base.htm"))).toString();
     let html = parse(file);
